@@ -1,0 +1,65 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the h1 title */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Side-by-side divs */
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-div, .right-div {
+    width: 45%;
+}
+
+/* Style for the h3 tags */
+h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Style for the ordered list in the left div */
+.left-div ol {
+    list-style: decimal inside; 
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 300;
+}
+
+/* Styling for the unordered list in the right div */
+.right-div ul {
+    list-style: upper-roman inside; 
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 300;
+}
+
+/* Footer div styling */
+.footer-div {
+    width: 100%;
+    margin-top: 60px; 
+    text-align: right;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* Link styling */
+.footer-div a {
+    text-decoration: none;
+    color: #3A7CA5; 
+}
+
+.footer-div a:hover {
+    text-decoration: underline; 
+}
