@@ -1,0 +1,148 @@
+/*
+Seth Glover
+Date: 11/24/2024
+Title: Module 8.2 CSS
+*/
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+    border-bottom: solid 15px #FF5722;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #555;
+    color: #FFD700;
+}
+
+/* Container Div */
+#container {
+    margin: 2% 5% 100px 5%; /* Top, Right/Left, Bottom */
+    padding: 10px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #4CAF50;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card-content ol {
+    padding-left: 20px;
+}
+
+.card-content a {
+    color: #FF5722;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+/* Movies Table Styles */
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#movies ul {
+    padding-left: 20px; /* Indent list inside table */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4CAF50;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    float: right;
+    padding-right: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    float: left; /* Align "Back to Portal" to the left */
+    padding-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
