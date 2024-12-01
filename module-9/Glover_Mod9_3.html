@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Seth Glover
+Date: 12/1/2024
+Title: Module 9.3 HTML/CSS Assignment
+Purpose: JavaScript - Part 1
+-->
+<head>
+    <script>
+        var firstVariableValue = "Jurassic";
+        var secondVariableValue = "scientists";
+        var thirdVariableValue = "should";
+        var fourthVariableValue = "engineers";
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="CSD 340 Web Development. Assignment9-3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seth Glover">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <p> Dr. Ian Malcolm and John Hammond. <span id = "Jurassic">_________</span> Park </p>
+        <hr>
+        <p> I don't think you're giving us our due credit. Our <span id = "scientists">_________</span> have done things which nobody's ever done before... </p>
+        <p> Yeah, yeah, but your scientists were so preoccupied with whether or not they could that they didn't stop to think if they <span id = "should">_________</span>. </p>
+        <p> ... </p>
+        <p> God help us, we're in the hands of <span id = "engineers">_________</span>.</p>
+        <p>
+            <button type="button"
+              onclick="document.getElementById('Jurassic').innerHTML = firstVariableValue">Jurassic</button> <br />   
+            <button type="button"
+              onclick="document.getElementById('scientists').innerHTML = secondVariableValue">scientists</button> <br />   
+            <button type="button"
+              onclick="document.getElementById('should').innerHTML = thirdVariableValue">should</button> <br />   
+            <button type="button"
+              onclick="document.getElementById('engineers').innerHTML = fourthVariableValue">engineers</button> <br />   
+        </p> 
+                <!-- Bottom div with a link to the landing page -->
+                <div class="footer-div">
+                    <a href="/csd/csd-340/index.html">Back to Landing Page</a>
+                </div>
+    </div>
+</body>
+</html>
