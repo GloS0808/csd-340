@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+<html lang="en">
+<html xmlns='http://www.w3.org/1999/xhtml'></html>
+<!--
+Seth Glover
+Date: 12/8/2024
+Title: Module 10.3 HTML/CSS Assignment
+Purpose: JavaScript - Part 2
+images sources:
+https://www.diffen.com/difference/Stalactite_vs_Stalagmite
+https://photojournal.jpl.nasa.gov/catalog/PIA25330
+-->
+<head>
+    <script>
+        function displayImage(imageFile){
+          var largerImage = document.getElementById("mainImage");
+          var newNode = document.createElement("img");
+          newNode.id = "mainImage";
+          newNode.src = imageFile;
+          newNode.alt = "Large Image";
+          newNode.className = "mainImage";
+          newNode.style.width = "300px";
+          newNode.style.height = "200px";
+          largerImage.parentNode.replaceChild(newNode, largerImage);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="CSD 340 Web Development. Assignment10-3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Seth Glover">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <br />
+    <div>
+      <a href=#
+         onmouseover="cave.src='Europa.jpg';"
+         onmouseout= "cave.src='Europa-wonky.jpg';"
+      >
+        <img border = 0 name = "cave" src = "Europa-wonky.jpg">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change.
+      <br />
+
+    </div>
+    <div>
+      <a href=#
+         onmouseover="moon.src='ice-stalagmites.jpg';"
+         onmouseout= "moon.src='ice-stalagmites-wonky.jpg';"
+      >
+        <img border = 0 name = "moon" src = "ice-stalagmites-wonky.jpg">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change.
+      <br />
+      Right-click and select View Source for more details.
+
+    </div>
+                <!-- Bottom div with a link to the landing page -->
+                <div class="footer-div">
+                    <a href="/csd/csd-340/index.html">Back to Landing Page</a>
+                </div>
+    </div>
+</body>
+</html>
