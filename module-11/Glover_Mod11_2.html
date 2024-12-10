@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+<html lang="en">
+<html xmlns='http://www.w3.org/1999/xhtml'></html>
+<!--
+Seth Glover
+Date: 12/9/2024
+Title: Module 11.2 HTML/CSS Assignment
+Purpose: JavaScript - Part 3
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Glover CSD 340 Landing Page</title>
+    <link rel="stylesheet" href="Glover_Mod11_2.css">
+    <script>
+        let myArray = [];
+
+        // Add an element to array
+        function addElement() {
+            const textBox = document.getElementById('textBox');
+            const newValue = textBox.value.trim();
+            if (newValue !== "") {
+                myArray.push(newValue);
+                alert(`Added: "${newValue}" at position ${myArray.length}`);
+                textBox.value = ""; // Clear text box after adding
+            } else {
+                alert("Please enter a value to add.");
+            }
+        }
+
+        // Delete selected items
+        function deleteSelectedItems() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            if (checkboxes.length === 0) {
+                alert("No items selected to delete.");
+                return;
+            }
+
+            // Remove items from array starting from the end to avoid index issues
+            const indicesToRemove = Array.from(checkboxes).map(cb => parseInt(cb.value, 10)).sort((a, b) => b - a);
+            indicesToRemove.forEach(index => myArray.splice(index, 1));
+
+            alert("Selected items deleted.");
+            displayList(); 
+        }
+
+        // Display list
+        function displayList() {
+            const listContainer = document.getElementById('listContainer');
+            listContainer.innerHTML = "";
+
+            if (myArray.length === 0) {
+                listContainer.innerHTML = "<p>The list is empty.</p>";
+            } else {
+                const ul = document.createElement('ul');
+                myArray.forEach((item, index) => {
+                    const li = document.createElement('li');
+                    const checkbox = document.createElement('input');
+                    checkbox.type = "checkbox";
+                    checkbox.value = index; 
+                    li.appendChild(checkbox);
+                    li.appendChild(document.createTextNode(` ${index + 1}. ${item}`));
+                    ul.appendChild(li);
+                });
+                listContainer.appendChild(ul);
+
+                // Delete Selected button below the list
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = "Delete Selected";
+                deleteButton.onclick = deleteSelectedItems;
+                listContainer.appendChild(deleteButton);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+        <p>TO DO List, created by Seth Glover</p>
+
+        <!-- Input Text Box and Buttons -->
+        <div>
+            <label for="textBox">Enter Text:</label>
+            <input type="text" id="textBox" />
+            <button onclick="addElement()">Add</button>
+            <button onclick="displayList()">Display</button>
+        </div>
+
+        <hr />
+
+        <!-- List Display Section -->
+        <div id="listContainer">
+            <!-- List appears here -->
+        </div>
+
+        <!-- Bottom div with a link to the landing page -->
+        <div class="footer-div">
+            <a href="/csd/csd-340/index.html">Back to Landing Page</a>
+        </div>
+    </div>
+</body>
+</html>

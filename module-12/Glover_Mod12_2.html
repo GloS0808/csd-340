@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Seth Glover
+Date: 12/9/2024
+Title: Module 12.2 HTML/CSS Assignment
+Purpose: Favorite books enhanced
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Books</title>
+    <link rel="stylesheet" href="Glover_Mod12_2.css">
+    <script>
+        // JavaScript Section
+        const books = [
+            "Wuthering Heights",
+            "Frankenstein",
+            "An Occurrence at Owl Creek Bridge",
+            "Dracula",
+            "The 'God' Part of the Brain",
+            "Astrophysics for People in a Hurry",
+            "Dune",
+            "The Walk",
+            "The Time Machine",
+            "The Strange Case of Dr. Jekyll and Mr. Hyde"
+        ];
+
+        // Function to display books in ascending order
+        function displayTopToBottom() {
+            const listContainer = document.getElementById('bookList');
+            listContainer.innerHTML = ""; // Clear previous contents
+            books.sort(); // Sort books in ascending order
+            books.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = book;
+                listContainer.appendChild(li);
+            });
+        }
+
+        // Function to display books in descending order
+        function displayBottomToTop() {
+            const listContainer = document.getElementById('bookList');
+            listContainer.innerHTML = ""; // Clear previous contents
+            books.sort().reverse(); // Sort books in descending order
+            books.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = book;
+                listContainer.appendChild(li);
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Main container for the entire content -->
+    <div id="container">
+        <!-- Centered main heading -->
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        
+        <!-- Two side-by-side divs for books and learning items -->
+        <div class="side-by-side">
+            <!-- Left div for favorite books -->
+            <div class="left-div">
+                <h3>Top 10 Favorite Books</h3>
+                <div>
+                    <!-- Buttons for sorting -->
+                    <button onclick="displayTopToBottom()">Top to Bottom</button>
+                    <button onclick="displayBottomToTop()">Bottom to Top</button>
+                </div>
+                <!-- Dynamic list display -->
+                <ul id="bookList"></ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom div with a link to the landing page -->
+        <div class="footer-div">
+            <a href="/csd/csd-340/index.html">Back to Landing Page</a>
+        </div>
+    </div>
+</body>
+</html>
